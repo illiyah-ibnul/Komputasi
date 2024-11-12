@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-image: url('/images/bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky; /* Menjaga navigasi tetap di atas */
+    top: 0; /* Posisi tetap saat scroll */
+    z-index: 1000; /* Mengangkat ke atas elemen lainnya */
+}
+
+nav a {
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    margin: 0 15px;
+    display: inline-block; /* Pastikan a bisa di-rotate */
+    transition: transform 0.3s ease;
+}
+nav a:hover {
+    transform: rotate(5deg);
+    color: #ffcc00;                    /* Mengubah warna teks saat hover */
+}
+
+nav a.active {
+    color: #4CAF50; /* Warna untuk link aktif */
+    font-weight: bold; /* Menebalkan teks link aktif */
+    border-bottom: 2px solid #4CAF50; /* Garis bawah untuk link aktif */
+}
+
+
+
+
+main {
+    display: list-item;
+    max-width: 1200px; /* Menjaga lebar maksimum */
+    margin: 20px auto; /* Centering */
+    padding: 30px; /* Meningkatkan padding di sekitar konten */
+    background-color: rgb(27, 19, 19); /* Latar belakang konten putih */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Bayangan */
+    opacity: 0.9;
+}
+
+.wrapper{
+    display: flex;
+    gap: 10px;
+    opacity: 1;
+}
+#boxkanan{
+    flex: 2;
+    background-color: #7E60BF;
+    padding: 20px;
+    width: 30%;
+    opacity: 0.9;
+    box-shadow: 5px 5px 15px rgba(252, 249, 249, 0.3); /* Adds shadow */
+    
+}
+#boxkiri {
+    flex: 2;
+    background-color: #7E60BF;
+    padding: 20px;
+    width: 30%;
+    padding-top: 40px;
+    opacity: 0.9;
+    box-shadow: 5px 5px 15px rgba(250, 249, 249, 0.3); /* Adds shadow */
+}
+
+article {
+     /* Mengatur flex artikel */
+    margin-right: 30px; /* Jarak yang lebih besar antara artikel dan sidebar */
+    padding: 20px; /* Menambahkan padding dalam artikel */
+}
+img{
+    
+    width: 250px; /* Atur lebar sesuai kebutuhan */
+    /* atau */
+    height: 150px; 
+}
+
+
+aside {
+    flex: 1; /* Mengatur flex sidebar */
+    background-color: #433878; /* Latar belakang sidebar */
+    padding: 20px; /* Meningkatkan padding di sidebar */
+    box-shadow: #edf5ed;
+    box-shadow: 5px 5px 15px rgba(247, 247, 247, 0.3); /* Adds shadow */
+
+}
+
+footer {
+    background-color: #080a09; /* Latar belakang footer */
+    color: white; /* Warna teks footer */
+    text-align: center; /* Menyelaraskan teks */
+    padding: 20px; /* Meningkatkan padding footer */
+    margin-top: 30px; /* Jarak di atas footer */
+}
+
+section {
+    margin: 60px 0; /* Meningkatkan margin atas untuk memberi ruang dari navigasi */
+    padding: 20px; /* Padding untuk bagian tentang dan kontak */
+    background-color: #7E60BF; /* Latar belakang untuk section */
+    border-radius: 8px; /* Menambahkan sudut yang melengkung */
+    opacity: 0.9;
+}
+
+#kkn{
+    width: 500px; 
+    height: 400px; 
+    
+}
+
+
+.about{
+    display: flex; /* Menggunakan flex untuk menjajarkan konten */
+    flex-direction: column; /* Menjajarkan konten secara vertikal */
+    align-items: center; /* Menjajarkan konten ke tengah */
+}
+
+.daftar {
+    align-self: flex-start; /* Pastikan daftar tetap di kiri */
+    text-align: left;       /* Teks dalam daftar berada di kiri */
+    margin-left: 20px;      /* Opsional: menambahkan jarak dari tepi kiri */
+}
+
+/* Struktur dan styling dasar untuk kontak */
+.contact {
+    
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #7E60BF;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0,9;
+}
+
+.contact h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+
+.contact p {
+    background-color: #7E60BF;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 95%;
+    
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Tombol Kirim */
+button[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.about h2{
+    padding-top: 50px;
+    color: #edf5ed; /* Mengubah warna judul */
+}
+
+.contact p {
+    margin-bottom: 10px; /* Jarak di bawah paragraf kontak */
+}
